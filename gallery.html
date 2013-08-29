@@ -5,6 +5,22 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" /><title>gallery</title>
 
 <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+
+<!--JavaScript for slides of images-->
+<script type="text/javascript">
+<!-->
+var image1=new Image()
+image1.src="images/IMG_0224.jpg"
+var image2=new Image()
+image2.src="images/IMG_0290.jpg"
+var image3=new Image()
+image3.src="images/IMG_0221.jpg"
+var image4=new Image()
+image3.src="images/IMG_0235.jpg"
+//-->
+</script>
+<!--JavaScript for slides of images- End-->
+
 </head>
 <body style="height: 961px;">
 <div id="wrapper">
@@ -37,8 +53,11 @@
 me</a></li>
   <li style="margin-left: 36px; width: 95px;"><a
  href="academic.html">Academic</a></li>
+ 
+ <!--
   <li style="margin-left: 38px; width: 74px;"><a
  href="link.html">Links</a></li>
+ -->
   <li style="margin-left: 43px; width: 53px;"><a
  href="blog.html">Blog</a></li>
   <li></li>
@@ -47,11 +66,36 @@ me</a></li>
 </ul>
 </div>
 <!-- end #menu -->
-<div id="page"><a href="gallery-xian.html">Xi'an,
+<div id="page">
+
+<!--
+<a href="gallery-xian.html">Xi'an,
 China</a><br />
-<br />
+
+
 <a href="gallery-dc.html">Washington
 DC, US</a><br />
+-->
+
+<!--Slides of Images-->
+<img src="images/IMG_0224.jpg" name="slide" width="400" height="400">
+<script type="text/javascript">
+<!--
+var step=1
+function slideit(){
+document.images.slide.src=eval("image"+step+".src")
+if(step<4)
+step++
+else
+step=1
+setTimeout("slideit()",2500)
+}
+slideit()
+//-->
+</script>
+<!--Slides of Images - End-->
+
+
 <br />
 <br />
 <br />
