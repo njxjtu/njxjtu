@@ -59,6 +59,7 @@
 Cisco IOS Router Links Configuration</span></span></p>
 
 <ul>
+
 <li>
 <a style="font-family: Garamond;">Cisco IOS Router Peer L3 Link</a>
 <p style="font-family: Garamond;">On device #1 (IP: 10.128.2.11): <br>
@@ -71,6 +72,20 @@ router bgp 110<br>
  bgp log-neighbor-changes<br>
  neighbor 10.128.2.11 remote-as 100</p>
 </li>
+
+<li>
+<a style="font-family: Garamond;">Cisco IOS OSPF Neighbor L3 Link</a>
+<p style="font-family: Garamond;">On device #1 (IP: 10.128.2.11): <br>
+router bgp 100 <br>
+ bgp log-neighbor-changes <br>
+ neighbor 10.128.2.10 remote-as 110</p>
+ 
+ <p style="font-family: Garamond;">On device #2 (IP: 10.128.2.10):<br>
+router bgp 110<br>
+ bgp log-neighbor-changes<br>
+ neighbor 10.128.2.11 remote-as 100</p>
+</li>
+
 </ul>
 
 </div>
