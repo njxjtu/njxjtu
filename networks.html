@@ -62,13 +62,13 @@ Cisco IOS Router Links Configuration</span></span></p>
 <li>
 <a>Cisco IOS Router Peer L3 Link</a>
 <p>On device #1 (IP: 10.128.2.11):
-router bgp 100
- bgp log-neighbor-changes
+router bgp 100 <br>
+ bgp log-neighbor-changes <br>
  neighbor 10.128.2.10 remote-as 110</p>
  
- <p>On device #2 (IP: 10.128.2.10):
-router bgp 110
- bgp log-neighbor-changes
+ <p>On device #2 (IP: 10.128.2.10):<br>
+router bgp 110<br>
+ bgp log-neighbor-changes<br>
  neighbor 10.128.2.11 remote-as 100</p>
 </li>
 </ul>
