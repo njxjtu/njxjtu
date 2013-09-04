@@ -85,12 +85,27 @@ Show run | s ospf </br>
 OSPF config on 192.168.1.138:</br>
 <img src="images/CiscoOSPFLinkD01_01.png">
 <img src="images/CiscoOSPFLinkD01_02.png">
+
+OSPF config on 10.128.2.135(admin/D0rado!!/enable/enable): </br>
+<img src="images/CiscoOSPFLinkD02_01.png">
+<img src="images/CiscoOSPFLinkD02_02.png">
+Confirm / check ospf neighbor on Cisco:</br>
+Show ip ospf neighbor</br>
+
+Example for Cisco OSPF: 10.128.2.30-10.128.2.31</br>
+On 10.128.2.30 (management interface: vlan1)</br>
+Router ospf 1 </br>
+Network 10.128.2.30 0.0.0.255 area 0</br>
+On 10.128.2.31 (management interface vlan1)</br>
+Router ospf 1</br>
+Network 10.128.2.31 0.0.0.255 area 0</br>
+
+%%since x.x.x.30 and x.x.x.31 has 30 and 31 as the difference; therefore the mask would be 0.0.0.255</br>
+
 </p>
  
- <p style="font-family: Garamond;">On device #2 (IP: 10.128.2.10):<br>
-router bgp 110<br>
- bgp log-neighbor-changes<br>
- neighbor 10.128.2.11 remote-as 100</p>
+
+ 
 </li>
 
 </ul>
