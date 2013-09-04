@@ -74,11 +74,17 @@ router bgp 110<br>
 </li>
 
 <li>
-<a style="font-family: Garamond;">Cisco IOS OSPF Neighbor L3 Link</a>
-<p style="font-family: Garamond;">On device #1 (IP: 10.128.2.11): <br>
-router bgp 100 <br>
- bgp log-neighbor-changes <br>
- neighbor 10.128.2.10 remote-as 110</p>
+<a style="font-family: Garamond;">Cisco IOS Router OSPF Neighbor L3 Link</a>
+<p style="font-family: Garamond;">Cisco OSPF config pre-condition:</br>
+Make sure :</br>
+1. There is physical link between serial2/3 on 2.135 and serial2/3 on 2.138 </br>
+2. devices could ping each other(on 2/135, could ping 120.20.20.138; on 2.138, could ping 120.20.20.135) </br>
+3. interfaces(serial2/3) on both devices are not shutdown </br>
+Check the OSPF config on Cisco device:</br>
+Show run | s ospf </br>
+OSPF config on 192.168.1.138:</br>
+<img herf="CiscoOSPFLinkD01_01.png">
+</p>
  
  <p style="font-family: Garamond;">On device #2 (IP: 10.128.2.10):<br>
 router bgp 110<br>
